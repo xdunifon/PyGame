@@ -1,4 +1,9 @@
-#Tracks key aspects of the current game state to influence gameflow
+'''
+THIS IS A KEY FILE THAT DETAILS THE FUNCTIONS OF THE GAME STATE
+WHICH HEAVILY INFLUENCES THE CHARACTER'S EXPERIENCE AND GAMEPLAY LOOP
+'''
+
+
 class game_state():
     def __init__(self, combat, base, biome, night):
         self.combat = combat

@@ -1,3 +1,8 @@
+'''
+THIS IS A PRIMARY FILE THAT HOLDS THE STRUCTURE FOR EVERY 
+CREATURE IN THE GAME AND PROVIDES FUNCTIONS FOR MANIPULATING THEM
+'''
+
 #Creates a creature with the basic required components
 class creature():
     #Initializes function with the given parameters

@@ -1,6 +1,9 @@
 from CreatureClass import creature
 
-#THIS CLASS HOLDS CREATURES FOR THE GAME
+'''
+THIS FILE IS A LIBRARY THAT HOLDS EVERY CREATURE IN THE GAME AND THEIR RELEVENT STATS
+EACH CREATURE IS CREATED USING THE CREATURE CLASS
+'''
 
 def create_goblin(num):
     return creature(f"Goblin{num}", 5, 8, True, True, 5)

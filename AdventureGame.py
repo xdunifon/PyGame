@@ -11,7 +11,7 @@ IT RELIES ON OTHER CLASSES TO PROVIDE GAMEPLAY STRUCTURE AND LOOPS.
 player_name = input("Enter your character's name:")
 while len(player_name) > 18:
     player_name = input("Enter a name that's less than 19 characters: ")
-Player = creature(player_name, 10, 5, False, False, 10)
+Player = creature(player_name, 10, 5, False, False)
 print(Player.get_all())
 
 gstate = game_state(False, True, "Forest", False)

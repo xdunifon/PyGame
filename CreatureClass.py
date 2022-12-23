@@ -6,13 +6,13 @@ CREATURE IN THE GAME AND PROVIDES FUNCTIONS FOR MANIPULATING THEM
 #Creates a creature with the basic required components
 class creature():
     #Initializes function with the given parameters
-    def __init__(self, name, hp, dmg, enemy, hostile, max_hp):
+    def __init__(self, name, hp, dmg, enemy, hostile):
         self.name = name
         self.hp = hp
         self.dmg = dmg
         self.enemy = enemy
         self.hostile = hostile
-        self.max_hp = max_hp
+        self.max_hp = hp
 
     #Return functions for safe access
     def get_name(self):

@@ -1,10 +1,15 @@
+'''
+THIS IS A PRIMARY FILE THAT HOLDS THE STRUCTURE FOR EVERY 
+CREATURE IN THE GAME AND PROVIDES FUNCTIONS FOR MANIPULATING THEM
+'''
+
 #Creates a creature with the basic required components
 class creature():
     #Initializes function with the given parameters
-    def __init__(self, name, hp, ac, enemy, hostile, max_hp):
+    def __init__(self, name, hp, dmg, enemy, hostile, max_hp):
         self.name = name
         self.hp = hp
-        self.ac = ac
+        self.dmg = dmg
         self.enemy = enemy
         self.hostile = hostile
         self.max_hp = max_hp
@@ -14,8 +19,8 @@ class creature():
         return self.name
     def get_hp(self):
         return self.hp
-    def get_ac(self):
-        return self.ac
+    def get_dmg(self):
+        return self.dmg
     def is_enemy(self):
         return self.enemy
     def is_hostile(self):
@@ -25,7 +30,7 @@ class creature():
 
     #Prints relevant info for a creature
     def get_all(self):
-        return f"Name: {self.name :<20}Health: {self.hp :<10}Armor: {self.ac :<10}"
+        return f"Name: {self.name :<20}Health: {self.hp :<10}Armor: {self.dmg :<10}"
 
     #Adjusting creature aspects
     def damage(self, num):
@@ -38,8 +43,8 @@ class creature():
             self.hp = self.max_hp
         return self.hp
     def change_ac(self, num):
-        old_ac = self.ac
-        self.ac = num
+        old_ac = self.dmg
+        self.dmg = num
         return old_ac
     def become_hostile(self):
         self.hostile = True

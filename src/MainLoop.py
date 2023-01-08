@@ -1,4 +1,4 @@
-from CreatureClass import creature
+from CreatureClass import creature, player
 from GameStateClass import game_state
 import CreatureLibrary
 from CombatLoop import combat_loop_top
@@ -12,7 +12,7 @@ IT RELIES ON OTHER CLASSES TO PROVIDE GAMEPLAY STRUCTURE AND LOOPS.
 player_name = input("Enter your character's name:")
 while len(player_name) > 18:
     player_name = input("Enter a name that's less than 19 characters: ")
-Player = creature(player_name, 10, 6, 6)
+Player = player(player_name, 10, 6, 6, {"Health Potion":3})
 print(Player.get_all())
 
 #SETUP GAME STATE

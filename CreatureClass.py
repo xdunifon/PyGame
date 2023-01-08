@@ -6,31 +6,28 @@ CREATURE IN THE GAME AND PROVIDES FUNCTIONS FOR MANIPULATING THEM
 #Creates a creature with the basic required components
 class creature():
     #Initializes function with the given parameters
-    def __init__(self, name, hp, dmg, enemy, hostile):
+    def __init__(self, name, hp, str_die, chr_die):
         self.name = name
         self.hp = hp
-        self.dmg = dmg
-        self.enemy = enemy
-        self.hostile = hostile
         self.max_hp = hp
+        self.str_die = str_die
+        self.chr_die = chr_die
 
     #Return functions for safe access
     def get_name(self):
         return self.name
     def get_hp(self):
         return self.hp
-    def get_dmg(self):
-        return self.dmg
-    def is_enemy(self):
-        return self.enemy
-    def is_hostile(self):
-        return self.hostile
+    def get_str_die(self):
+        return self.str_die
+    def get_chr_die(self):
+        return self.chr_die
     def get_max_hp(self):
         return self.max_hp
 
     #Prints relevant info for a creature
     def get_all(self):
-        return f"Name: {self.name :<20}Health: {self.hp :<10}Armor: {self.dmg :<10}"
+        return f"Name: {self.name :<20}Health: {self.hp :<10}Strength Dice: d{self.str_die :<10}Charisma Dice: d{self.chr_die :<10}"
 
     #Adjusting creature aspects
     def damage(self, num):
@@ -42,21 +39,5 @@ class creature():
         else:
             self.hp = self.max_hp
         return self.hp
-    def change_ac(self, num):
-        old_ac = self.dmg
-        self.dmg = num
-        return old_ac
-    def become_hostile(self):
-        self.hostile = True
-        return True
-    def remove_hostile(self):
-        self.hostile = False
-        return False
-    def become_enemy(self):
-        self.enemy = True
-        return True
-    def become_friendly(self):
-        self.enemy = False
-        return False
 
     

@@ -8,10 +8,10 @@ CREATURE IN THE GAME AND PROVIDES FUNCTIONS FOR MANIPULATING THEM
 #Creates a creature with the basic required components
 class creature():
     #Initializes function with the given parameters
-    def __init__(self, name, hp, str_die, chr_die):
+    def __init__(self, name, hp, max_hp, str_die, chr_die):
         self.name = name
         self.hp = hp
-        self.max_hp = hp
+        self.max_hp = max_hp
         self.str_die = str_die
         self.chr_die = chr_die
 
@@ -42,13 +42,14 @@ class creature():
             self.hp = self.max_hp
         return self.hp
 
+#Subclass of creature class for player-specific utilities
 class player(creature):
-    def __init__(self, name, hp, str_die, chr_die, inventory):
+    def __init__(self, name, hp, hp_max, str_die, chr_die, inventory, level=1, experience=0, experience_goal=100):
         self.inventory = inventory
-        self.level = 1
-        self.experience = 0
-        self.experience_goal = 100
-        creature.__init__(self, name, hp, str_die, chr_die)
+        self.level = level
+        self.experience = experience
+        self.experience_goal = experience_goal
+        creature.__init__(self, name, hp, hp_max, str_die, chr_die)
         
     #Return functions for player attributes
     def get_inventory(self):

@@ -8,10 +8,10 @@ creature(name, hp, dmg, enemy, hostile)
 '''
 
 def create_goblin(num):
-    return creature(f"Goblin{num}", 5, 4, 4)
+    return creature(f"Goblin{num}", 5, 5, 4, 4)
 
 def create_Torwell():
-    return creature("Torwell", 10, 10, 10)
+    return creature("Torwell", 10, 10, 10, 10)
 
 def create_King_Leonard():
-    return creature("King Leonard", 50, 10, 10)
+    return creature("King Leonard", 50, 50, 10, 10)
